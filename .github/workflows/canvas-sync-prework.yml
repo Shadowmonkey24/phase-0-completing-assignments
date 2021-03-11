@@ -30,8 +30,8 @@ jobs:
         run: gem install github-to-canvas
 
       # environment variable secrets are currently set at repo level
-      # could be set at org level https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-an-organization
-      - name: Sync from .canvas file
+      # could be set at org level 
+https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-an-organization      - name: Sync from .canvas file
         run: github-to-canvas -a -lr --forkable --prework
         env:
           CANVAS_API_KEY: ${{ secrets.CANVAS_API_KEY }}
